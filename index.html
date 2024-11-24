@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio - Federico Rosciani</title>
-        <link rel="icon" href="./assets/logo.png" type="image/png">
+        <link rel="icon" href="/assets/logo.png" type="image/png">
         <link rel="stylesheet" href="styles.css">
     </head>
     
@@ -15,18 +15,16 @@
         <!-- Botón del menú hamburguesa -->
         <ul id="nav-menu">
             <li><a href="#home">Inicio</a></li> <!-- Nueva sección Inicio -->
-            <li><a href="#sobre-mi">Acerca de mí</a></li>
             <li><a href="#projects">Proyectos</a></li> <!-- Nueva sección Proyectos -->
-            <li><a href="#education">Educación</a></li>
             <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#sobre-mi">Acerca de mí</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
         <ul>
             <li><a href="#home">Inicio</a></li> <!-- Nueva sección Inicio -->
-            <li><a href="#sobre-mi">Acerca de mí</a></li>
             <li><a href="#projects">Proyectos</a></li> <!-- Nueva sección Proyectos -->
-            <li><a href="#education">Educación</a></li>
             <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#sobre-mi">Acerca de mí</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
         <button id="mode-toggle" class="mode-btn">
@@ -49,73 +47,56 @@
     </header>
     
 
-
-    <div class="section about-me" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Soy </strong>Federico Rosciani</strong>, tengo 21 años y me encuentro estudiando la carrera de la <strong>Licenciatura en Sistemas</strong> en la Universidad Argentina de la Empresa (UADE). Me apasiona la programación y el diseño de <strong>soluciones innovadoras</strong>.</p>
-    
-        <p>Mis <strong>objetivos</strong> incluyen desarrollarme en <strong>desarrollo web, inteligencia artificial y gestión de bases de datos. </strong></p>
-    
-        <p>Mi meta es convertirme en un desarrollador <strong>creativo</strong> y competente, capaz de enfrentar los desafíos del entorno digital. Busco crear soluciones que <strong>marquen la diferencia</strong>.</p>
-    
-        <p>A medida que avanzo en mis estudios, sigo ampliando mis conocimientos en desarrollo web, inteligencia artificial y bases de datos. Aspiro a contribuir en proyectos con <strong>impacto significativo</strong> y aprender mediante experiencias y trabajo en equipo.</p>
-    
-        <p>Estoy motivado por las <strong>oportunidades</strong> que el futuro me depara y decidido a hacer de mis pasiones una carrera exitosa en el campo de la tecnología.</p>
-    </div>
-    
     <section id="projects" class="section">
-        <h2 class="project-titles">
-            <img src="assets/tituloproyectos.png" alt="Imagen de Proyectos" class="project-image-header">
-        </h2>    
-        <div class="projects-container">
+        <h2 class="project-titles">Proyectos Destacados</h2>
+        <div class="projects-grid">
             <!-- Proyecto 1 -->
             <div class="project-card">
-                <img src="assets/logodonbernardo.png" alt="Proyecto 1" class="project-image">
-                <div class="project-content">
+                <div class="project-image-container">
+                    <img src="assets/paginadonbernardo.png" alt="Cervecería Don Bernardo" class="project-image">
+                    <div class="project-hover-overlay">
+                        <a href="https://federicorosciani.github.io/CerveceriaDonBernardo/" target="_blank" class="view-project-btn">Ver Proyecto</a>
+                    </div>
+                </div>
+                <div class="project-details">
                     <h3 class="project-title">Cervecería Don Bernardo</h3>
                     <p class="project-date">Marzo 2022 - Junio 2022</p>
-                    <p class="project-description">
-                        Desarrollé una página web para la cervecería Don Bernardo, enfocada en ofrecer una experiencia atractiva e informativa para los clientes. La página incluye una galería de imágenes, un menú interactivo de cervezas y comidas, una sección de contacto con formulario, y un mapa integrado para facilitar la ubicación del local. El diseño es completamente responsive, asegurando una excelente navegación en dispositivos móviles y de escritorio, y utiliza animaciones sutiles para mejorar la experiencia de usuario. Esta pagina web la desarrolle para el trabajo final de la materia "Diseño y Desarrollo web"
-                    </p>
+                    <p class="project-description">Desarrollo de una página web interactiva con menú dinámico, galería de imágenes y diseño completamente responsive.</p>
+                    <div class="project-technologies">
+                        <img src="assets/html.png" alt="HTML" title="HTML">
+                        <img src="assets/css.png" alt="CSS" title="CSS">
+                        <img src="assets/java.png" alt="JavaScript" title="JavaScript">
+                        <img src="assets/boostrap.png" alt="Bootstrap" title="Bootstrap">
+                    </div>
                 </div>
-                <!-- Nueva sección que aparece al hacer hover -->
-            <div class="project-extra-info">
-                <h4>Tecnologías usadas:</h4>
-                <div class="technologies">
-                    <img src="assets/html.png" alt="HTML">
-                    <img src="assets/css.png" alt="CSS">
-                    <img src="assets/js.png" alt="JavaScript">
-                    <img src="assets/boostrap.png" alt="JavaScript">
-
-                </div>
-                <a href="https://www.portafolioartistico.com" target="_blank" class="project-link">Ver Proyecto</a>
-            </div>
             </div>
     
             <!-- Proyecto 2 -->
-            
-        </div>
-    </section>
-    
-    
-    <section id="education" class="section">
-        <h2 class="animated-title">Educación</h2>
-        <div class="education-list">
-            <div class="school-name">
-                <a href="https://echeverria.vaneduc.edu.ar/" target="_blank">
-                    <span>Colegio Esteban Echeverría</span>
-                </a>
-                <p>Bachiller en Economía (Egresado en 2021)</p>
-            </div>
-            <div class="school-name">
-                <a href="https://www.uade.edu.ar/facultad-de-ingenieria-y-ciencias-exactas/licenciatura-en-gestion-de-tecnologia-de-la-informacion/" target="_blank">
-                    <span>Licenciatura en Sistemas - UADE</span>
-                </a>
-                <p>2022 - Actualmente (55% de la carrera aprobada)</p>
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="assets/paginaagus.png" alt="Lic. Agustina Bayoni" class="project-image">
+                    <div class="project-hover-overlay">
+                        <a href="https://agustinabayoni.github.io/Lic.-AgustinaBayoni/" target="_blank" class="view-project-btn">Ver Proyecto</a>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">Lic. Agustina Bayoni</h3>
+                    <p class="project-date">Noviembre 2024</p>
+                    <p class="project-description">Sitio web profesional para servicios de traducción con diseño minimalista y enfocado en la experiencia del usuario.</p>
+                    <div class="project-technologies">
+                        <img src="assets/html.png" alt="HTML" title="HTML">
+                        <img src="assets/css.png" alt="CSS" title="CSS">
+                        <img src="assets/java.png" alt="JavaScript" title="JavaScript">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
+    
+
+    
+
     <section id="skills" class="section">
         <h2 class="knowledge-title" id="knowledge-title">Conocimientos/habilidades </h2>
         <div class="skills-container">
@@ -123,11 +104,10 @@
             <div class="skill-category">
                 <h3>Lenguajes de Programación</h3>
                 <ul>
-                    <li><img src="assets/python.png" alt="Python" class="emoji"> Python</li>
-                    <li><img src="assets/java.png" alt="Java" class="emoji"> Java</li>
-                    <li><img src="assets/html.png" alt="HTML" class="emoji"> HTML</li>
-                    <li><img src="assets/css.png" alt="CSS" class="emoji"> CSS</li>
-                    <li><img src="assets/sql.png" alt="SQL" class="emoji"> SQL</li>
+                    <li><img src="assets/python.png" alt="Python" class="emoji"> Python - Avanzado</li>
+                    <li><img src="assets/java.png" alt="Java" class="emoji"> Java - Superior</li>
+                    <li><img src="assets/html.png" alt="HTML" class="emoji"> HTML - Avanzado</li>
+                    <li><img src="assets/css.png" alt="CSS" class="emoji"> CSS - Avanzado</li>
                 </ul>
             </div>
             <div class="skill-category">
@@ -144,9 +124,9 @@
             <div class="skill-category">
                 <h3>Bases de Datos</h3>
                 <ul>
-                    <li><img src="assets/sql.png" alt="SQL" class="emoji"> SQL</li>
-                    <li><img src="assets/nosql.png" alt="NoSQL" class="emoji"> NoSQL</li>
-                    <li><img src="assets/sqlserver.png" alt="NoSQL" class="emoji"> Sql Server</li>
+                    <li><img src="assets/sql.png" alt="SQL" class="emoji"> SQL - Avanzado</li>
+                    <li><img src="assets/nosql.png" alt="NoSQL" class="emoji"> NoSQL - Superior</li>
+                    <li><img src="assets/sqlserver.png" alt="NoSQL" class="emoji"> Sql Server </li>
                     <li><img src="assets/mongodb.png" alt="MongoDB" class="emoji"> MongoDB</li>
                 </ul>
             </div>
@@ -154,10 +134,10 @@
             <div class="skill-category">
                 <h3>Software de Diseño</h3>
                 <ul>
-                    <li><img src="assets/photoshop.png" alt="Photoshop" class="emoji"> Photoshop</li>
-                    <li><img src="assets/figma.png" alt="Figma" class="emoji"> Figma</li>
-                    <li><img src="assets/picsart.png" alt="Figma" class="emoji"> Picsart</li>
-                    <li><img src="assets/canva.png" alt="Figma" class="emoji"> Canva</li>
+                    <li><img src="assets/photoshop.png" alt="Photoshop" class="emoji"> Photoshop - Superior</li>
+                    <li><img src="assets/figma.png" alt="Figma" class="emoji"> Figma - Avanzado</li>
+                    <li><img src="assets/picsart.png" alt="Figma" class="emoji"> Picsart - Avanzado</li>
+                    <li><img src="assets/canva.png" alt="Figma" class="emoji"> Canva - Avanzado</li>
 
 
                 </ul>
@@ -185,7 +165,18 @@
         </div>
     </section>
     
+    <div class="section about-me" id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy </strong>Federico Rosciani</strong>, tengo 21 años y me encuentro estudiando la carrera de la <strong>Licenciatura en Sistemas</strong> en la Universidad Argentina de la Empresa (UADE). Me apasiona la programación y el diseño de <strong>soluciones innovadoras</strong>.</p>
     
+        <p>Mis <strong>objetivos</strong> incluyen desarrollarme en <strong>desarrollo web, inteligencia artificial y gestión de bases de datos. </strong></p>
+    
+        <p>Mi meta es convertirme en un desarrollador <strong>creativo</strong> y competente, capaz de enfrentar los desafíos del entorno digital. Busco crear soluciones que <strong>marquen la diferencia</strong>.</p>
+    
+        <p>A medida que avanzo en mis estudios, sigo ampliando mis conocimientos en desarrollo web, inteligencia artificial y bases de datos. Aspiro a contribuir en proyectos con <strong>impacto significativo</strong> y aprender mediante experiencias y trabajo en equipo.</p>
+    
+        <p>Estoy motivado por las <strong>oportunidades</strong> que el futuro me depara y decidido a hacer de mis pasiones una carrera exitosa en el campo de la tecnología.</p>
+    </div>
 
 
 
@@ -250,3 +241,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

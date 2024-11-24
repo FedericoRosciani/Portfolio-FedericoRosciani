@@ -374,7 +374,7 @@ body.dark-mode nav ul li a:hover {
     scroll-margin-top: 80px;
     margin-top: 100px;
     padding: 20px;
-    max-width: 800px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(202, 207, 206);
@@ -477,7 +477,7 @@ h3 {
     border-radius: 10px;
     padding: 30px;
     margin: 100px auto;
-    max-width: 800px;
+    max-width: 1500px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -487,6 +487,8 @@ h3 {
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+
 
 /* Animación cuando aparece */
 .about-me.visible {
@@ -697,129 +699,147 @@ body.dark-mode .knowledge-title {
 /* -------------------------------- */
 /* Sección de proyectos */
 
-
-.projects-container {
-    display: flex;
-    flex-direction: column; /* Alineación vertical de los proyectos */
-    gap: 30px; /* Espacio entre cada proyecto */
-    margin-top: 30px;
+#projects {
+    background-image: url('assets/fondo_proyectos.png'); /* Cambia la ruta si es necesario */
+    background-size: cover; /* Asegúrate de que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    box-shadow: 0 0 10px rgba(177, 15, 15, 0.1); /* Sombra opcional */
 }
 
+body.dark-mode #projects {
+    background-image: url('assets/fondo_proyectos_oscuro.png') /* Fondo para modo oscuro */
+}
+
+
+/* Contenedor principal de proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjeta de proyecto */
 .project-card {
-    background-color:beige;
-    border-radius: 30px;
+    background: #f7ddcd;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s, box-shadow 0.4s;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative; /* Necesario para la parte extra de tecnologías */
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Desplazamiento en hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de proyecto */
+.project-image-container {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #000000;
 }
 
 .project-image {
-    width: 25%; /* Imagen más pequeña */
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
-    transition: transform 0.3s ease;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
 
-.project-content {
-    padding: 20px;
+.project-image-container:hover .project-image {
+    transform: scale(1.1);
+}
+
+/* Overlay al hover */
+.project-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center; 
-    z-index: 1; 
-    transition: transform 0.6s ease-in-out; /* Transición para mover hacia arriba */
-    background-color: #ffe3b8;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.project-image-container:hover .project-hover-overlay {
+    opacity: 1;
+}
+
+/* Botón dentro del overlay */
+.view-project-btn {
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.view-project-btn:hover {
+    background: #e67e22;
+}
+
+/* Detalles del proyecto */
+.project-details {
+    padding: 20px;
+    text-align: center;
 }
 
 .project-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.6rem;
     color: #333;
+    margin-bottom: 10px;
 }
 
 .project-date {
-    font-size: 0.9em;
-    color: #999;
+    font-size: 0.9rem;
+    color: #777;
     margin-bottom: 15px;
 }
 
 .project-description {
-    font-size: 1em;
+    font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-/* Ajustes para la parte extra (tecnologías y link) */
-.project-extra-info {
-    padding: 20px;
-    background-color: #ffe3b8;
-    width: 100%;
-    position: absolute;
-    bottom: -40%; /* Reducido para que no cubra tanto */
-    left: 0;
-    transition: bottom 0.6s ease-in-out;
-    z-index: 2; 
-}
-
-.project-card:hover .project-extra-info {
-    bottom: 0; /* Aparece desde abajo al hacer hover */
-}
-
-.project-card:hover .project-content {
-    transform: translateY(-110px); /* Desplazamiento menor para que no se oculte la descripción */
-}
-
-.technologies {
+/* Tecnologías */
+.project-technologies {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
-.technologies img {
-    width: 30px;
-    height: 30px;
-}
-
-.project-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9800;
-    color: rgb(255, 255, 255);
+.project-technologies img {
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.project-link:hover {
-    background-color: #e68900;
-    transform: scale(1.1);
+.project-technologies img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.project-image-header {
-    width: 450px; /* Cambia el tamaño a un valor más razonable */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-left: 10px; /* Espacio entre el título y la imagen */
-    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
-    margin-top: 0; /* Elimina el margen superior */
-}
-
-#projects h2 {
-    margin-bottom: 5px; /* Reduce el margen inferior del título */
-    padding-bottom: 0; /* Elimina el padding inferior */
-    margin-top: 0; /* Mantén el margen superior en 0 para evitar espacios innecesarios */
-}
-
 
 
 /* Responsividad */
@@ -872,7 +892,7 @@ body.dark-mode .knowledge-title {
 /* Estilo para el botón de descarga */
 .download-button-container {
     text-align: center; /* Centra el botón */
-    margin: 20px 0; /* Espaciado vertical */
+    margin: 35px 0; /* Espaciado vertical */
 }
 
 .download-button {
@@ -881,7 +901,7 @@ body.dark-mode .knowledge-title {
     color: white;
     background-color: #664405; /* Color verde */
     border: none;
-    border-radius: 8px;
+    border-radius: 18px;
     text-decoration: none; /* Elimina el subrayado */
     transition: background-color 0.3s, transform 0.2s;
 }
